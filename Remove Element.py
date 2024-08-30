@@ -1,19 +1,17 @@
 class Solution:
     def removeElement(self, nums: list[int], val: int) -> int:
-        k = 0
-        l = len(nums)
-        for number in nums:
-            if number == val:
-                # nums.remove(number)
-                # nums.remove(number)
-                nums.remove(val)
-            else:
+        k=0
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
                 k+=1
-        print(nums)
-        print(k)
         return k
-        
-    
-    removeElement(0,[3,2,2,3,3],3)
-    
-    
+                    
+
+nums = [0, 1, 2, 2, 3, 0, 4, 2]
+val = 2
+print("Original array:", nums)
+sol = Solution()
+new_length = sol.removeElement(nums, val)
+print("Modified array:", nums[:new_length])
+print("New length:", new_length)
