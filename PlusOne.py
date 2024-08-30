@@ -11,6 +11,7 @@ class Solution:
                     digits[i] = 0
                     if i == 0:
                         digits.insert(0, 1)
+        return digits
                 
         
 x = [1,2,3]
